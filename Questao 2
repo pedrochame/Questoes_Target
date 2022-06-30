@@ -1,0 +1,20 @@
+n = int(input())
+
+if(n == 0):
+  print("Sequência de Fibonacci: 0")
+  print("O número pertence à sequência.")
+else:
+  if(n == 1):
+    print("Sequência de Fibonacci: 0 1")
+    print("O número pertence à sequência.")
+  else:
+    seq = [0,1]
+    for i in range(n-1):
+      seq.append(seq[-1] + seq[-2])
+    print("Sequência de Fibonacci: ", end = "")
+    for i in seq:
+      print(i," ", end = "")
+    if(n in seq):
+      print("\nO número pertence à sequência.")
+    else:
+      print("\nO número não pertence à sequência.")
