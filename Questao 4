@@ -1,0 +1,8 @@
+faturamento = [ ['SP',67836.43] , ['RJ',36678.66] , ['MG',29229.88] , ['ES',27165.48] , ['Outros',19849.53] ]
+
+soma = 0
+for i in faturamento:
+  soma = soma + i[1]
+
+for i in faturamento:
+  print(i[0],": ", i[1]/soma*100 , "%")
