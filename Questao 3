@@ -1,0 +1,24 @@
+import json
+
+with open("dados.json", encoding='utf-8') as meu_json:
+  dados = json.load(meu_json)
+
+v = []
+for i in dados:
+  if(i['valor'] != 0 ):
+    v.append(i['valor']);
+
+print("Menor valor de faturamento ocorrido em um dia do mês: ", min(v))
+print("Maior valor de faturamento ocorrido em um dia do mês: ", max(v))
+
+soma = 0
+for i in v:
+  soma = soma + i
+media = soma/len(v)
+
+x = 0
+for i in v:
+  if(i > media):
+    x = x + 1
+
+print("Número de dias no mês em que o valor de faturamento diário foi superior à média mensal: ", x)
