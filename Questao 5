@@ -1,0 +1,15 @@
+entrada = input("String: ")
+
+lista = []
+tam = 0
+for i in entrada:
+  lista.append(i)
+  tam = tam + 1
+
+i = tam - 1
+string_invertida = ''
+while i >=0:
+  string_invertida = string_invertida + lista[i]
+  i = i - 1
+
+print("String invertida:", string_invertida)
